@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siddharth's Professional Meme Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <!-- Navigation Menu -->
+    <nav>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-list">
+            <li><a href="#home" onclick="scrollToSection(event, 'home')">Home</a></li>
+            <li><a href="#events" onclick="scrollToSection(event, 'events')">Events</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="#blog" onclick="scrollToSection(event, 'blog')">Blog</a></li>
+            <li><a href="#about" onclick="scrollToSection(event, 'about')">About Us</a></li>
+            <li><a href="http://siddharthgroup.ac.in/resultpage.html" target="_blank" >Results</a></li>
+            <li><a href="https://www.instagram.com/siddhartha_memes/" target="_blank" class="join">Join Now</a></li>
+        </ul>
+        <script>
+            function scrollToSection(event, sectionId) {
+                event.preventDefault();
+                const section = document.getElementById(sectionId);
+                if (section) {
+                    section.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        </script>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="video-container">
+            <video autoplay loop muted playsinline>
+                <source src="videos/bg-video1 (1).mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="hero-content">
+            <h1 id="typing-effect"></h1>
+            <h2>Siddharth's First-Ever Professional Meme Page!</h2>
+            <script>
+                const text = "Join the Legacy of Siddharth's Professional Meme Page!";
+                let index = 0;
+                function typeEffect() {
+                    const typingElement = document.getElementById('typing-effect');
+                    if (index < text.length) {
+                        typingElement.textContent += text.charAt(index);
+                        index++;
+                        setTimeout(typeEffect, 150);
+                    }
+                }
+
+                document.addEventListener('DOMContentLoaded', typeEffect);
+            </script>
+            <a href="https://www.instagram.com/siddhartha_memes/" tabindex="_blank" target="_blank"
+                class="cta-button">Join Now!</a>
+        </div>
+        <!-- Social Media Links -->
+        <div class="social-media">
+            <a href="https://youtube.com/@siddharthamemes8875?si=jktW-6KMsUd5jFvJ" target="_blank" class="social-icon">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://www.instagram.com/siddhartha_memes/" target="_blank" class="social-icon">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/share/12KYkLi8ax6/" target="_blank" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <h2>Why Siddharth Memes? The Real Question is – Why Not?</h2>
+
+        <div class="feature-cards">
+            <div class="feature-card">
+                <img src="images/instant updates.png" alt="Instant Updates">
+                <h3>INSTANT UPDATES</h3>
+                <p>Stay ahead with the latest campus news, announcements, and inside scoops. From event alerts to
+                    surprise holidays, we deliver updates faster than your CR's WhatsApp group!</p>
+            </div>
+
+            <div class="feature-card">
+                <img src="images/fun.png" alt="Fun Memes">
+                <h3>FUN & ENGAGING MEMES</h3>
+                <p>Fun & Engaging Memes – Entertainment  Guaranteed! College life is stressful, but memes make it
+                    better! Enjoy daily doses of fun, relatable, and viral content.</p>
+            </div>
+
+            <div class="feature-card">
+                <img src="images/skill and growth.png" alt="Skills Growth">
+                <h3>SKILLS & GROWTH</h3>
+                <p>Skills & Growth – Laugh & Learn! Memes are fun, but we also drop valuable insights on skills,
+                    internships, and personal growth. Stay tuned for quick learning tips, career hacks, and upskilling
+                    resources – all in meme style!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="stats-container">
+            <div class="stat">
+                <div class="stat-number">11,800+</div>
+                <div class="stat-label">Community Members</div>
+            </div>
+
+            <div class="stat">
+                <div class="stat-number">150+</div>
+                <div class="stat-label">Events Listed</div>
+            </div>
+
+            <div class="stat">
+                <div class="stat-number">6,80,000+</div>
+                <div class="stat-label">Digital Reach</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="events">
+        <h2>Siddharth Events</h2>
+        <p>Join our College Events and expand your network</p>
+
+        <div class="evets-container">
+            <div class="event-card">
+                <img src="images/quest-2k25.jpg" alt="Poster of Siddharth Quest 2K25 event" class="event-image">
+
+                <div class="event-details">
+                    <h3>Presenting</h3>
+                    <h4>A 15th National Level Technical Symposium</h4>
+
+                    <div class="event-meta">
+                        <span class="event-meta-icon fa fa-map-marker"></span>
+                        <span>Siddharth Institute Of Engineering And Technology, Narayan Vanam, Puttur, Tirupati</span>
+                    </div>
+
+                    <div class="event-meta">
+                        <span class="event-meta-icon fa fa-calendar"></span>
+                        <span>4th April 2025</span>
+                    </div>
+
+                    <a href="javascript:void(0)" class="register-button">Closed!</a>
+                </div>
+            </div>
+            <div class="event-card">
+                <img src="images/hack-fest-2k25.jpg" alt="Poster of Siddharth Quest 2K25 event" class="event-image">
+
+                <div class="event-details">
+                    <h3>Completed</h3>
+                    <h4>Siddharth HackFest 2k25</h4>
+
+                    <div class="event-meta">
+                        <span class="event-meta-icon fa fa-map-marker"></span>
+                        <span>Siddharth Institutions, Narayan Vanam, Puttur, Tirupati</span>
+                    </div>
+
+                    <div class="event-meta">
+                        <span class="event-meta-icon fa fa-calendar"></span>
+                        <span>27th & 28th on march 2025</span>
+                    </div>
+
+                    <a href="javascript:void(0)" class="register-button">Closed!</a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQs Section -->
+    <section class="faqs">
+        <h2>FAQS</h2>
+
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">What is Siddharth Memes?</div>
+                <div class="faq-answer">Siddharth Memes is the official-unofficial meme page for our college! We bring
+                    you instant updates, fun memes, and skill-based content – all in one place!</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Who Runs This Page?</div>
+                <div class="faq-answer">A group of passionate students who believe memes are the best way to express
+                    college life. Oh, don't worry – we won't reveal our Team identity.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can I submit my own memes?</div>
+                <div class="faq-answer">we also drop relatable student-life memes, career tips, and tech-related humor
+                    because we know you need a break from all that coding.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I join the Siddharth Memes team?</div>
+                <div class="faq-answer">We're always looking for creative minds! If you love making memes, have graphic
+                    design skills, or can write savage captions, DM us on Instagram!</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can I request a specific type of meme?</div>
+                <div class="faq-answer">Of course! Want a meme about your professor's legendary dialogues or a campus
+                    moment? DM us, and we'll cook something up!</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I stay updated?</div>
+                <div class="faq-answer">Follow us on Instagram, bookmark our website, and enable notifications! We
+                    promise to keep you entertained and informed – no boring stuff!</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- History Section -->
+    <section id="about" class="history">
+        <h2>History Of Our Page</h2>
+        <p>It all started in May 2019, Dhasarath created this page to share college updates in a fun way. Over time,
+            Likith and Pavan Teja took the initiative to develop and grow it further.</p>
+        <p>Siddharth Memes is the FIRST and OG meme page of our college! Seeing its success, many other pages were
+            inspired to follow. From small beginnings to hitting major milestones, this page has grown into a community
+            of 12K+ followers, keeping students entertained, informed, and engaged!</p>
+        <p>And this is just the beginning... Stay tuned for more</p>
+
+        <div class="contact-buttons">
+            <a href="#" class="contact-button">Contact Us</a>
+            <a href="#" class="contact-button">Chat With Our Team</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Copyright@Siddharth Memes. All rights reserved.</p>
+        <p>Built with passion by HEMANTHKUMAR K S & KIRAN KUMAR REDDY M</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
