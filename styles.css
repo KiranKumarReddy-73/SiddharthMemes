@@ -348,10 +348,11 @@ nav ul li a:hover {
 }
 
 footer {
-    color: white;
+    background-color: #f9f9f9;
     padding: 20px;
     text-align: center;
-    font-size: 1rem;
+    font-size: 0.9rem;
+    color: #666;
     line-height: 1.5;
 }
 
