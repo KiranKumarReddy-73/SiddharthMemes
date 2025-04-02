@@ -83,7 +83,16 @@ nav ul li a:hover {
     background-color: white;
     border-radius: 2px;
 }
-
+.close-icon{
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: white;
+}
 .nav-list {
     display: flex;
     flex-direction: row;
@@ -106,7 +115,27 @@ nav ul li a:hover {
 .nav-list.active li {
     margin: 10px 0;
 }
+.nav-list select {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    appearance: none;
+    outline: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
 
+.nav-list select:hover {
+    background-color: #444;
+}
+
+.nav-list select option {
+    background-color: #222;
+    color: white;
+}
 .hero {
     height: 100vh;
     display: flex;
@@ -536,7 +565,7 @@ footer {
         margin: 5px 10px;
     }
 
-    .menu-toggle {
+    .menu-toggle,.close-icon {
         display: flex;
     }
 
@@ -547,6 +576,10 @@ footer {
 
     .nav-list.active {
         display: flex;
+    }
+    .nav-list select {
+        font-size: 14px;
+        padding: 6px 10px;
     }
 
     .hero h1 {
@@ -631,6 +664,10 @@ button:hover, .cta-button:hover, .join:hover, .register-button:hover, .contact-b
     transform: scale(1.05);
 }
 @media (max-width: 480px) {
+    .nav-list select {
+        font-size: 12px;
+        padding: 5px 8px;
+    }
     .hero h1 {
         font-size: 2rem;
     }

@@ -5,17 +5,11 @@ const body = document.body;
 if (mobileMenu && navList) {
     mobileMenu.addEventListener('click', (event) => {
         event.stopPropagation(); // Prevent click from propagating to the window
-        navList.classList.toggle('active');
-        if (navList.classList.contains('active')) {
-            body.style.overflow = 'hidden'; 
+        const isActive = navList.classList.toggle('active');
+        mobileMenu.classList.toggle('close-icon', isActive); // Add or remove close-icon based on active state
+        if (isActive) {
+            body.style.overflow = 'hidden';
         } else {
-            body.style.overflow = ''; 
-        }
-    });
-
-    window.addEventListener('click', () => {
-        if (navList.classList.contains('active')) {
-            navList.classList.remove('active');
             body.style.overflow = '';
         }
     });
@@ -25,13 +19,13 @@ document.querySelectorAll('.faq-question').forEach(question => {
     question.addEventListener('click', () => {
         const answer = question.nextElementSibling;
         if (answer) {
-            answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            answer.classList.toggle('visible');
         }
     });
 });
 
 document.querySelectorAll('.faq-answer').forEach(answer => {
-    if (answer) {
-        answer.style.display = 'none';
+    if (answer && !answer.classList.contains('visible')) {
+        answer.classList.add('hidden');
     }
 });

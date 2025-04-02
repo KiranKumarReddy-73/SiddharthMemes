@@ -20,13 +20,22 @@
             <span class="bar"></span>
             <span class="bar"></span>
         </div>
+        <!-- <div class="close-icon" id="close-icon">
+        <i class="fas fa-times"></i>
+        </div> -->
         <ul class="nav-list">
             <li><a href="#home" onclick="scrollToSection(event, 'home')">Home</a></li>
             <li><a href="#events" onclick="scrollToSection(event, 'events')">Events</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="#blog" onclick="scrollToSection(event, 'blog')">Blog</a></li>
             <li><a href="#about" onclick="scrollToSection(event, 'about')">About Us</a></li>
-            <li><a href="http://siddharthgroup.ac.in/resultpage.html" target="_blank" >Results</a></li>
+            <li>
+                <select onchange="if (this.value) window.open(this.value, '_blank')">
+                    <option value="" disabled selected>Results</option>
+                    <option value="http://siddharthgroup.ac.in/sistkresultpage.html">SISTK Results</option>
+                    <option value="http://www.siddharthgroup.ac.in/resultpage.html">SIETK Results</option>
+                </select>
+            </li>
             <li><a href="https://www.instagram.com/siddhartha_memes/" target="_blank" class="join">Join Now</a></li>
         </ul>
         <script>
