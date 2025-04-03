@@ -13,6 +13,13 @@ if (mobileMenu && navList) {
             body.style.overflow = '';
         }
     });
+
+    // Close nav-list when navigating to a new page
+    window.addEventListener('beforeunload', () => {
+        navList.classList.remove('active');
+        mobileMenu.classList.remove('close-icon');
+        body.style.overflow = '';
+    });
 }
 
 document.querySelectorAll('.faq-question').forEach(question => {
