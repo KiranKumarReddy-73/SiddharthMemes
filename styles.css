@@ -580,6 +580,9 @@ footer {
     .nav-list select {
         font-size: 14px;
         padding: 6px 10px;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    border: none;   
     }
 
     .hero h1 {
