@@ -29,3 +29,23 @@ document.querySelectorAll('.faq-answer').forEach(answer => {
         answer.classList.add('hidden');
     }
 });
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const scrollContainer = document.querySelector(".events-container");
+    const leftButton = document.querySelector(".scroll-button.left");
+    const rightButton = document.querySelector(".scroll-button.right");
+
+    // Scroll to the right when right button is clicked
+    rightButton.addEventListener("click", () => {
+        scrollContainer.scrollBy({ left: 350, behavior: "smooth" });
+    });
+
+    // Scroll to the left when left button is clicked
+    leftButton.addEventListener("click", () => {
+        scrollContainer.scrollBy({ left: -350, behavior: "smooth" });
+    });
+
+});

@@ -41,64 +41,44 @@
     <section class="gallery">
         <h2>Image Gallery</h2>
         <p>Welcome to our curated collection of moments captured during various events and celebrations. Click on any image to view it in full size.</p>
-        <div class="fest">
-            <h1>Siddharth HackFest 2K25</h1>
-            <div class="image-container">
-                <img src="images/chairman-invitaion.jpg" alt="Image 1">
-                <img src="images/hack-fest-invitaion-sietk-principal-2k25.jpg" alt="Image 1">
-                <img src="images/hack-fest-invitaion-sistk-principal-2k25.jpg" alt="Image 2">
-                <img src="images/hack-fest-invitaion-vp-2k25.jpg" alt="Image 3">
-                <img src="images/1.JPG" alt="Image 4">
-                <img src="images/2.jpg" alt="Image 5">
-                <img src="images/3.jpg" alt="Image 6">
-                <img src="images/4.jpg" alt="Image 7">
-                <img src="images/5.jpg" alt="Image 8">
-                <img src="images/6.jpg" alt="Image 9">
-                <img src="images/7.jpg" alt="Image 10">
-                <img src="images/8.jpg" alt="Image 11">
-                <img src="images/9.jpg" alt="Image 12">
-                <img src="images/10.jpg" alt="Image 13">
-                <img src="images/11.jpg" alt="Image 14">
-                <img src="images/hack-fest-first-prize.jpg" alt="Image 15">
-                <img src="images/hack-fest-second-prize.jpg" alt="Image 16">
-                <img src="images/hack-fest-third-prize-sietk.jpg" alt="Image 17">
-                <img src="images/hack-fest-third-prize-sistk.jpg" alt="Image 18">
+    <div class="gallery-event-cards-container">
+        <div class="gallery-event-card">
+            <img src="images/quest-2k25.jpg" alt="Siddharth Quest 2K25" class="event-image">
+            <div class="event-details">
+                <h3>Presenting</h3>
+                <h4>15th National Level Technical Symposium</h4>
+                <p><i class="fa fa-map-marker"></i> Siddharth Institute, Puttur</p>
+                <p><i class="fa fa-calendar"></i> 4th April 2025</p>
+                <a href="SiddarthQuest2k25.html" class="register-button">Visit OUr Gallery</a>
             </div>
         </div>
-        
+        <div class="gallery-event-card">
+            <img src="images/hack-fest-2k25.jpg" alt="Siddharth Quest 2K25" class="event-image">
+            <div class="event-details">
+                <h3>Completed</h3>
+                <h4>Siddharth HackFest 2K25</h4>
+                <p><i class="fa fa-map-marker"></i> Siddharth Institutions, Puttur</p>
+                <p><i class="fa fa-calendar"></i> 27th & 28th March 2025</p>
+                <a href="hackfest.html" class="register-button">Visit OUr Gallery</a>
+            </div>
+        </div>
+        <!-- <div class="gallery-event-card">
+            <img src="images/hack-fest-2k25.jpg" alt="Siddharth Quest 2K25" class="event-image">
+            <div class="event-details">
+                <h3>Completed</h3>
+                <h4>Science Day</h4>
+                <p><i class="fa fa-map-marker"></i> Siddharth Institutions, Puttur</p>
+                <p><i class="fa fa-calendar"></i> 28th Feb 2025</p>
+                <a href="ScienceDay.html" class="register-button">Visit OUr Gallery</a>
+            </div>
+        </div> -->
+    </div>
     </section>
 
-    <div class="modal" id="modal">
-        <span class="modal-close" id="modalClose">&times;</span>
-        <img id="modalImage" src="" alt="Modal Image">
-    </div>
 
-    <script>
-        const galleryImages = document.querySelectorAll('.gallery img');
-        const modal = document.getElementById('modal');
-        const modalImage = document.getElementById('modalImage');
-        const modalClose = document.getElementById('modalClose');
-
-        galleryImages.forEach(image => {
-            image.addEventListener('click', () => {
-                modal.style.display = 'flex';
-                modalImage.src = image.src;
-            });
-        });
-
-        modalClose.addEventListener('click', () => {
-            modal.style.display = 'none';
-        });
-
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                modal.style.display = 'none';
-            }
-        });
-    </script>
     <footer>
         <p>Copyright@Siddharth Memes. All rights reserved.</p>
-        <p>Built with passion by HEMANTHKUMAR K S & KIRAN</p>
+        <p>Built with passion by <a href="https://www.linkedin.com/in/hemanthkumar-k-s?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="footer-link-director"> HEMANTHKUMAR K S </a> & <a href="https://www.linkedin.com/in/kiran-kumar-reddy-4a4455274?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"  target="_blank" class="footer-link-director"> KIRAN KUMAR REDDY M </a></p>
     </footer>
     <script src="script.js"></script>
 </body>
